@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.QuizController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/quizbg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="submitButton" focusTraversable="false" layoutX="358.0" layoutY="422.0" mnemonicParsing="false" onAction="#submit" prefHeight="30.0" prefWidth="150.0" styleClass="buttonMain" stylesheets="@application.css" text="Submit" textFill="#510000">
+         <font>
+            <Font name="DejaVu Sans Bold" size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="inputTextfield" layoutX="83.0" layoutY="367.0" onAction="#submit" onKeyReleased="#typeMacron" prefHeight="42.0" prefWidth="314.0" styleClass="textField" stylesheets="@application.css" />
+      <Label layoutX="567.0" layoutY="251.0" prefHeight="142.0" prefWidth="165.0" styleClass="question" stylesheets="@application.css" />
+      <Button fx:id="replayButton" focusTraversable="false" layoutX="399.0" layoutY="510.0" mnemonicParsing="false" onAction="#replaySound" prefHeight="47.0" prefWidth="110.0" styleClass="buttonMain" stylesheets="@application.css" text="Replay" textFill="#320000">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font></Button>
+      <Label fx:id="topicLabel" alignment="CENTER" layoutX="63.0" layoutY="153.0" prefHeight="57.0" prefWidth="415.0" styleClass="textTopicLabel" stylesheets="@application.css" text="Topic" textAlignment="CENTER" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="322.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="28.0" />
+         </font>
+      </Label>
+      <Slider fx:id="slider" layoutX="242.0" layoutY="455.0" max="2.0" maxHeight="-Infinity" maxWidth="-Infinity" min="0.4" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="150.0" prefWidth="20.0" rotate="-90.0" value="1.0" />
+      <Label fx:id="topicLabel1" alignment="CENTER" layoutX="310.0" layoutY="518.0" prefHeight="23.0" prefWidth="90.0" text="Fast" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="topicLabel11" alignment="CENTER" layoutX="112.0" layoutY="518.0" prefHeight="23.0" prefWidth="90.0" text="Slow" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Bold" size="14.0" />
+         </font>
+      </Label>
+      <Text id="textLabelQuiz" layoutX="671.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="10.0" styleClass="textLabelQuiz" text="score" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text id="text" fx:id="score" layoutX="542.71875" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="10.0" text="0" textAlignment="RIGHT" wrappingWidth="124.294921875">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="encouragingMessageLabel" alignment="CENTER" layoutX="63.0" layoutY="223.0" opacity="0.86" prefHeight="35.0" prefWidth="428.0" styleClass="textLabel" stylesheets="@application.css" textAlignment="CENTER" textFill="#252424">
+         <font>
+            <Font name="DejaVu Sans Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="hintLabel" alignment="CENTER" layoutX="73.0" layoutY="287.0" opacity="0.86" prefHeight="70.0" prefWidth="428.0" stylesheets="@application.css" text="_ _ _ _ _   _ _ _ _" textAlignment="CENTER" textFill="#141313">
+         <font>
+            <Font name="DejaVu Sans Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button focusTraversable="false" layoutX="83.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addMacron" prefHeight="33.0" prefWidth="37.0" styleClass="buttonMacron" stylesheets="@application.css" text="ā">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font></Button>
+      <Button focusTraversable="false" layoutX="139.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addMacron" prefHeight="33.0" prefWidth="37.0" styleClass="buttonMacron" stylesheets="@application.css" text="ē">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font></Button>
+      <Button focusTraversable="false" layoutX="195.0" layoutY="426.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addMacron" prefHeight="33.0" prefWidth="37.0" styleClass="buttonMacron" stylesheets="@application.css" text="ī">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font></Button>
+      <Button focusTraversable="false" layoutX="305.0" layoutY="426.0" mnemonicParsing="false" onAction="#addMacron" prefHeight="33.0" prefWidth="37.0" styleClass="buttonMacron" stylesheets="@application.css" text="ō">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font></Button>
+      <Button focusTraversable="false" layoutX="251.0" layoutY="426.0" mnemonicParsing="false" onAction="#addMacron" prefHeight="33.0" prefWidth="37.0" styleClass="buttonMacron" stylesheets="@application.css" text="ū">
+         <font>
+            <Font name="DejaVu Sans Bold" size="13.0" />
+         </font></Button>
+      <Label fx:id="questionLabel" alignment="CENTER" layoutX="605.0" layoutY="307.0" prefHeight="40.0" prefWidth="90.0" styleClass="textLabel" stylesheets="@application.css" text="1" textAlignment="CENTER" textFill="#1b1a1a" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="DejaVu Sans Bold" size="52.0" />
+         </font>
+      </Label>
+      <Label fx:id="practiceLabel" alignment="CENTER" layoutX="438.0" layoutY="98.0" prefHeight="15.0" prefWidth="314.0" styleClass="textLabel" stylesheets="@application.css" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Bold" size="30.0" />
+         </font>
+      </Label>
+      <Text id="textLabelQuiz" layoutX="504.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="10.0" styleClass="textLabelQuiz" text="time" textAlignment="CENTER" wrappingWidth="124.294921875">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text id="text" fx:id="timer" layoutX="518.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="10.0" text="0" textAlignment="CENTER" wrappingWidth="38.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="bonus" fill="#43f20d" layoutX="673.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="10.0" textAlignment="CENTER" wrappingWidth="110.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="20.0" />
+         </font>
+      </Text>
+      <ImageView id="buttonSmall" fitHeight="50.0" fitWidth="50.0" layoutX="703.0" layoutY="525.0" onMouseClicked="#switchToMenuFromGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/home.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="infoPlane" fx:id="macronPlane" layoutX="523.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="144.0">
+         <children>
+            <Text layoutY="72.0" strokeType="OUTSIDE" strokeWidth="10.0" text="You can add macrons by pressing alt after a vowel" textAlignment="CENTER" wrappingWidth="144.0">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView id="buttonSmall" fitHeight="37.0" fitWidth="37.0" layoutX="532.0" layoutY="424.0" onMouseClicked="#showMacronInfo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/helpbutton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="63.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/volume.png" />
+         </image>
+      </ImageView>
+      <ImageView id="buttonSmall" fitHeight="42.0" fitWidth="42.0" layoutX="412.0" layoutY="367.0" onMouseClicked="#skipQuestion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/skip.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="questionLabel1" alignment="CENTER" layoutX="592.0" layoutY="267.0" prefHeight="40.0" prefWidth="116.0" styleClass="textLabel" stylesheets="@application.css" text="Question" textAlignment="CENTER" textFill="#1b1a1a" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="DejaVu Sans Bold" size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane id="infoPlane" fx:id="answerPlane" layoutX="98.0" layoutY="229.0" prefHeight="58.0" prefWidth="358.0">
+         <children>
+            <Label fx:id="answerLabel" alignment="CENTER" layoutX="25.0" layoutY="5.0" prefHeight="47.0" prefWidth="293.0" text="Answer">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="127.0" fitWidth="340.0" layoutX="54.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/kemukupulogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

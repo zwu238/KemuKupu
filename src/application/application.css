@@ -1,0 +1,86 @@
+/* Main buttons */
+
+.buttonMain {
+	-fx-background-color: #63d695;
+	-fx-background-radius: 25px;
+	-fx-text-fill: white;
+	-fx-font-size: 23px;
+	-fx-font-weight: bold;
+	
+}
+
+.buttonMain:hover{
+	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
+
+/* Macron buttons */
+
+.buttonMacron {
+	-fx-background-color: #deefeb;
+	-fx-background-radius: 5px;
+	-fx-text-fill: black; 
+	-fx-font-size:19px;
+	-fx-font-weight: bold;	
+	
+}
+.buttonMacron:hover{
+	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
+
+/* icon buttons */
+
+#buttonSmall:hover {
+	-fx-scale-x: 1.2;
+	-fx-scale-y: 1.2;
+}
+
+.textField {
+	-fx-background-radius: 20px;
+	-fx-font-weight: bold;
+	-fx-font-size:19px;
+	-fx-background-color: #BEBEBE;
+}
+
+.textLabel {
+	-fx-font-weight: bold;
+	-fx-text-fill: #63d695;
+}
+
+#textLabelQuiz {
+	-fx-text-fill: #63d695;
+	-fx-font-weight: bold;
+	-fx-background-color: #63d695;
+	-fx-font-size: 30px;
+	
+}
+
+.textTopicLabel {
+	-fx-font-weight: bold;
+	-fx-text-fill: #63d695;
+}
+
+.spellingHintText {
+	-fx-font-size:35px;
+}
+
+#infoPlane {
+	-fx-background-color: #63d695;
+	-fx-opacity: 0.5;
+	-fx-background-radius: 20px;
+	-fx-text-fill: white; 
+}
+
+
+#buttonTopic:hover {
+	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
+
+.question {
+	-fx-background-color: white;
+	-fx-background-radius: 20px;
+}
+
+
